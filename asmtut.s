@@ -10,5 +10,6 @@ Wish me a success
 
 _start:
 	mov r0, #65
-	mov r7, #1
-	swi 0
+	bal _part2
+	@ mov r7, #1
+	@ swi 0
