@@ -11,7 +11,7 @@ Wish me a success
 _start:
 	mov r1, #15
 	mov r2, #0xA @ 10
-	sub r0, r1, r2
+	mul r0, r1, r2
 	
 end:
 	mov r7, #1
