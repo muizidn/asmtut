@@ -9,12 +9,10 @@ Wish me a success
 .global _start
 
 _start:
-	mov r1, #15
-	mov r2, #0xA @ 10
-	mov r3, #50
-	mla r0, r1, r2, r3
-	
-end:
+	mov r0, #15
+	b other
+	mov r0, #20	
+other:
 	mov r7, #1
 	swi 0
 
