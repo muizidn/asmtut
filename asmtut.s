@@ -8,10 +8,17 @@ Wish me a success
 
 .global _start
 
-_start:
+_start: @read
+	mov r7, #3
+	mov r0, #0
+	mov r2, #10
+	ldr r1, =message
+	swi 0
+
+_write:
 	mov r7, #4
 	mov r0, #1
-	mov r2, #12
+	mov r2, #5
 	ldr r1, =message
 	swi 0
 
@@ -21,4 +28,4 @@ end:
 
 .data
 message:
-	.ascii "Hello World\n"
+	.ascii " " @ must " " rather than "" ? do research!
