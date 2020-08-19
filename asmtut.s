@@ -3,7 +3,7 @@
 _start:
 	mov r1, #5
 	mov r2, #9
-	and r0, r1, r2
+	orr r0, r1, r2
 	
 end:
 	mov r7, #1
