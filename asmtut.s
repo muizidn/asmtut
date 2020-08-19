@@ -3,7 +3,7 @@
 _start:
 	mov r1, #9
 	mov r2, #8
-	tst r1, r2
+	teq r1, r2
 	beq _bit_set
 	mov r0, #1
 	b end
