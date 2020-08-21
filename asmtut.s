@@ -1,16 +1,8 @@
 .global _start
 
 _start:
-	mov r0, #50
-	mov r1, #2
-	b _loop
-
-_decrement:
-	subgt r0, r0, r1
-
-_loop:
-	cmp r0, r1
-	bne _decrement
+	mov r1, #15
+	mov r0, r1, lsl #1
 
 end:
 	mov r7, #1
