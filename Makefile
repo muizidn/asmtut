@@ -7,5 +7,5 @@ asmtut.o: asmtut.s
 clean:
 	rm *.o asmtut
 
-debug:
+debug: asmtut
 	gdb asmtut
