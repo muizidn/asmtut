@@ -1,15 +1,12 @@
 .data
-primes:
-	.word 2
-	.word 3
-	.word 5
-	.word 7
+numbers:
+	.byte 1, 2, 3, 4, 5
 
 .text
 .global _start
 _start:
-	ldr r3, =primes
-	ldr r0, [r3, #8]
+	ldr r3, =numbers
+	ldrb r0, [r3, #4]
 
 end:
 	mov r7, #1
