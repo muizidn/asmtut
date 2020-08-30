@@ -1,16 +1,19 @@
 .global _start
 
 _start:
-	mov r1, #1
-	mov r2, #2
-	
-	str r1, [sp, #-4]!
-	str r2, [sp, #-4]!
+	mov r4, #1
+	mov r5, #2
 
-	ldr r0, [sp], #+4
-	ldr r0, [sp], #+4
+	stmdb sp!, {r4, r5}
+	mov r4, #3
+	mov r5, #4
+	add r0, r4, #0
+	add r0, r0, r5
+	
+	ldmia sp!, {r4, r5}
+	add r0, r0, r4
+	add r0, r0, r5
 
 end:
 	mov r7, #1
 	swi 0
-
