@@ -9,3 +9,6 @@ clean:
 
 debug: asmtut
 	gdb asmtut
+	
+gcc:
+	gcc -o asmtut asmtut.s
